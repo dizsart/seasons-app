@@ -19,11 +19,8 @@ class App extends React.Component {
     );
   }
 
-  componentDidUpdate () {
-    console.log('My component just updated it re-rendered!')
-  }
-  render() {
-    
+  renderContent() {
+
     if(this.state.err && !this.state.lat){
       return (
       <div> Error: {this.state.err}</div>
@@ -34,6 +31,16 @@ class App extends React.Component {
     }
     return <Loader message = "Please accept location request"/>
   }
-}
+
+  render() {
+    
+    return (
+      <div>
+        {this.renderContent()}
+      </div>
+    );
+};
+};
+
 
 ReactDOM.render(<App/>, document.querySelector('#root'));

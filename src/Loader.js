@@ -12,7 +12,7 @@ const Loader = (props) => {
     );
 };
 
-Spinner.defaultProps = {
+Loader.defaultProps = {
     message: 'Loading...'
 };
 
